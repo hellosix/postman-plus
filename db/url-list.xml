@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<elements>
+	<element key="test001" value="{&quot;showName&quot;:&quot;test001&quot;,&quot;param&quot;:&quot;{\&quot;fdsaf\&quot;:1232}&quot;,&quot;type&quot;:&quot;get&quot;,&quot;url&quot;:&quot;http://localhost:8080/test-post&quot;,&quot;group&quot;:&quot;team1&quot;}"/>
+	<element key="test002" value="{&quot;showName&quot;:&quot;test002&quot;,&quot;param&quot;:&quot;{\&quot;fdsaf\&quot;:1232}&quot;,&quot;type&quot;:&quot;post&quot;,&quot;url&quot;:&quot;http://localhost:8080/test-post&quot;,&quot;group&quot;:&quot;team2&quot;}"/>
+	<element key="test4" value="{&quot;showName&quot;:&quot;test4&quot;,&quot;param&quot;:&quot;{\&quot;fdsaf\&quot;:12342}&quot;,&quot;type&quot;:&quot;post&quot;,&quot;url&quot;:&quot;http://localhost:8080/test-post&quot;,&quot;group&quot;:&quot;team2&quot;}"/>
+	<element key="test5" value="{&quot;showName&quot;:&quot;test5&quot;,&quot;param&quot;:&quot;{\&quot;fdsaf\&quot;:123235552}&quot;,&quot;type&quot;:&quot;post&quot;,&quot;url&quot;:&quot;http://localhost:8080/test-post&quot;,&quot;group&quot;:&quot;team2&quot;}"/>
+	<element key="fdsafdddddddddddddddddddddddd" value="{&quot;showName&quot;:&quot;fdsafdddddddddddddddddddddddd&quot;,&quot;param&quot;:&quot;{\&quot;fdsaf\&quot;:1232}&quot;,&quot;type&quot;:&quot;post&quot;,&quot;url&quot;:&quot;http://localhost:8080/test-post&quot;,&quot;group&quot;:&quot;team2&quot;}"/>
+	<element key="aaaaadd" value="{&quot;showName&quot;:&quot;aaaaadd&quot;,&quot;param&quot;:&quot;&quot;,&quot;type&quot;:&quot;get&quot;,&quot;url&quot;:&quot;http://localhost:8080/test-post&quot;,&quot;group&quot;:&quot;team1&quot;}"/>
+</elements>

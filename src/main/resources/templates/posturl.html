@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>postman</title>
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" charset="utf-8" />
+
+    <style>
+        .container-title{
+            height: 95px;
+            margin-bottom: 20px;
+            background-color: rgb(254, 255, 250);
+            border-bottom: 1px solid #e1e4e8;
+        }
+        .post-container-div{
+            margin-top: 10px;
+        }
+        .string { color: green; }
+        .number { color: darkorange; }
+        .boolean { color: blue; }
+        .null { color: magenta; }
+        .key { color: red; }
+
+        pre{
+            border-radius: 0px;
+            background-color: rgb(254, 255, 250);
+        }
+    </style>
+</head>
+<body>
+<div class="clearfix nav-height"></div>
+<div class="container-fluid container-title">
+    <div class="container-fluid container-title-content">
+        <div class="container-fluid">
+            <h1>PostMan</h1>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default" style="padding:0px;border:0px">
+            <div class="panel-body">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="post-type">post</span> <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)" class="post-type">post</a></li>
+                            <li><a href="javascript:void(0)" class="post-type">get</a></li>
+                        </ul>
+                    </div><!-- /btn-group -->
+                    <input type="text" class="form-control" name="request-url" placeholder="request url ..." />
+                    <span class="input-group-btn">
+                            <button class="btn btn-info" type="button" id="post-url" data-loading-text="Loading..."  autocomplete="off">REQUEST</button>
+                            <button class="btn btn-default" type="button" id="save-request-button">SAVE</button>
+                        </span>
+                </div><!-- /input-group -->
+                <div class="post-container-div">
+                    <textarea class="form-control" name="request-body" rows="3" onblur="json_check();"></textarea>
+                </div>
+                <div class="post-container-div"><pre id="show-result"></pre></div>
+            </div>
+        </div><!-- .panel -->
+    </div><!-- .row -->
+</div><!-- .container-fluid -->
+
+<div id="save-request-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Save Request</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="modal-post-type">post</span> <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:void(0)" class="modal-post-type">post</a></li>
+                                <li><a href="javascript:void(0)" class="modal-post-type">get</a></li>
+                            </ul>
+                        </div><!-- /btn-group -->
+                        <input type="text" class="form-control" name="modal-request-url" placeholder="request url ..." />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="modal-request-body" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>group</label>
+                    <input type="text" name="modal-post-group" class="form-control"  placeholder="itemservice" />
+                </div>
+                <div class="form-group">
+                    <label>name</label>
+                    <input type="text" name="modal-post-name" class="form-control"  placeholder="relation-table" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" id="save-request-modal-confirm">Save</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</body>
+<script src="../jquery/jquery-2.2.3.min.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/posturl.js"></script>
+<script th:inline="JavaScript">
+    /*<![CDATA[*/
+    window.url_model = [[${urlModel}]];
+    /*]]>*/
+</script>
+</html>
